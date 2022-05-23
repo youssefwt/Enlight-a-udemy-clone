@@ -3,13 +3,12 @@ import "./Navbar.css";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-// import Avatar from "@material-ui/core/Avatar";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { firebase } from "../firebase";
-import { UserContext } from "./Contexts/UserContext";
+import { firebase } from "../../firebase";
+import { UserContext } from "../Contexts/UserContext";
 import { Avatar } from "@mui/material";
 
 function Navbar() {

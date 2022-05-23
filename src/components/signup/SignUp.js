@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "../navbar/Navbar";
 import "./SignUp.css";
 import { Link, useHistory } from "react-router-dom";
-import Footer from "./Footer";
+import Footer from "../footer/Footer";
 import { useState } from "react";
-import { firebase } from "../firebase";
+import { firebase } from "../../firebase";
 
 function SignUp() {
   const [password, setPassword] = useState("");

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { Link, useHistory } from "react-router-dom";
-import Navbar from "./Navbar";
-import { firebase } from "../firebase";
-import Footer from "./Footer";
+import Navbar from "../navbar/Navbar";
+import { firebase } from "../../firebase";
+import Footer from "../footer/Footer";
 
 function Login() {
   const history = useHistory();

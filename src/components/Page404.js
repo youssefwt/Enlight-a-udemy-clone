@@ -1,13 +1,13 @@
-import React from 'react'
-import Navbar from './Navbar'
+import React from "react";
+import Navbar from "./navbar/Navbar";
 
 function Page404() {
-    return (
-        <div>
-            <Navbar />
-            <h1 style={{textAlign:"center"}} >404 - Page Does Not Exist</h1>
-        </div>
-    )
+  return (
+    <div>
+      <Navbar />
+      <h1 style={{ textAlign: "center" }}>404 - Page Does Not Exist</h1>
+    </div>
+  );
 }
 
-export default Page404
+export default Page404;

@@ -1,13 +1,13 @@
 import "./App.css";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Footer from "./components/footer/Footer";
+import Navbar from "./components/navbar/Navbar";
 import { Switch, Route } from "react-router-dom";
-import Login from "./components/Login";
+import Login from "./components/login/Login";
 import { UserContext } from "./components/Contexts/UserContext";
 import { useState } from "react";
 import Page404 from "./components/Page404";
-import SignUp from "./components/SignUp";
-import SearchPage from "./components/SearchPage";
+import SignUp from "./components/signup/SignUp";
+import SearchPage from "./components/search/SearchPage";
 import HomePage from "./pages/HomePage";
 
 function App() {
