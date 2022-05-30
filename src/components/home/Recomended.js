@@ -1,13 +1,14 @@
 import React from "react";
-import "./Home.css";
+import "./Recomended.css";
 import Row from "../Row";
 
-function Home() {
+function Recomended() {
   return (
-    <div className="home">
-      <h1 className="home__heading">Recommended for you</h1>
-      <div className="home__rows">
+    <div className="recomended">
+      <h1 className="recomended__heading">Recommended for you</h1>
+      <div className="recomended__rows">
         <Row
+          id={1}
           title="The Complete 2021 PHP Full Stack Web Developer Bootcamp"
           instructorName="Srinivas Vanamala"
           stars={4.5}
@@ -18,6 +19,7 @@ function Home() {
           isBestSeller
         />
         <Row
+          id={2}
           title="Python Django 2021 - Complete Course"
           instructorName="Dennis Ivy"
           stars={4.5}
@@ -28,6 +30,7 @@ function Home() {
           isBestSeller
         />
         <Row
+          id={3}
           title="The Complete 2021 Web Development Course - Build 15..."
           instructorName="Development Island (UK)"
           stars={4.5}
@@ -37,6 +40,7 @@ function Home() {
           image="https://img-c.udemycdn.com/course/240x135/548278_b005_9.jpg"
         />
         <Row
+          id={4}
           title="Django with React | An Ecommerce Website"
           instructorName="Dennis Ivy, Brad Traversy"
           stars={4.5}
@@ -46,6 +50,7 @@ function Home() {
           image="https://img-c.udemycdn.com/course/240x135/3792332_8a51_2.jpg"
         />
         <Row
+          id={5}
           title="[2021] React Native Made Easy"
           instructorName="Omar Maksousa"
           stars={4.5}
@@ -55,6 +60,7 @@ function Home() {
           image="https://img-c.udemycdn.com/course/240x135/4029024_1ca4_6.jpg"
         />
         <Row
+          id={6}
           title="iOS & Swift - The Complete iOS App Development Bootcamp"
           instructorName="Dr. Angela Yu"
           stars={4.5}
@@ -65,6 +71,7 @@ function Home() {
           isBestSeller
         />
         <Row
+          id={7}
           title="The Full Stack Web Development"
           instructorName="Eduonix Learning Solutions, Eduonix-Tech ., Samy Eduonix"
           stars={4.5}
@@ -74,6 +81,7 @@ function Home() {
           image="https://img-c.udemycdn.com/course/240x135/1002676_3c6e_2.jpg"
         />
         <Row
+          id={8}
           title="Full Stack Web Development Bootcamp with React and Python"
           instructorName="Bogdan Stashchuk"
           stars={4.5}
@@ -83,6 +91,7 @@ function Home() {
           image="https://img-c.udemycdn.com/course/240x135/3914632_39ed_4.jpg"
         />
         <Row
+          id={9}
           title="The Coding Interview Bootcamp: Algorithms + Data Structures"
           instructorName="Stephen Grider"
           stars={4.5}
@@ -93,6 +102,7 @@ function Home() {
           isBestSeller
         />
         <Row
+          id={10}
           title="Angular - The Complete Guide (2021 Edition)"
           instructorName="Maximilian Schwarzmüller"
           stars={4.5}
@@ -103,6 +113,7 @@ function Home() {
           isBestSeller
         />
         <Row
+          id={11}
           title="Vue - The Complete Guide (w/ Router, Vuex, Composition API)"
           instructorName="Maximilian Schwarzmüller"
           stars={4.5}
@@ -112,6 +123,7 @@ function Home() {
           image="https://img-c.udemycdn.com/course/240x135/995016_ebf4_3.jpg"
         />
         <Row
+          id={12}
           title="Angular & NodeJS - The MEAN Stack Guide [2021 Edition]"
           instructorName="Maximilian Schwarzmüller"
           stars={4.5}
@@ -121,6 +133,7 @@ function Home() {
           image="https://img-c.udemycdn.com/course/240x135/833442_b26e_5.jpg"
         />
         <Row
+          id={13}
           title="Python Django - The Practical Guide"
           instructorName="Academind by Maximilian Schwarzmüller, M..."
           stars={4.5}
@@ -130,6 +143,7 @@ function Home() {
           image="https://img-c.udemycdn.com/course/240x135/4015616_32a9_2.jpg"
         />
         <Row
+          id={14}
           title="Build a Backend REST API with Python & Django - Advanced"
           instructorName="Mark Winterbottom, Brooke Rutherford"
           stars={4.5}
@@ -139,6 +153,7 @@ function Home() {
           image="https://img-c.udemycdn.com/course/240x135/2045310_f8a2_6.jpg"
         />
         <Row
+          id={15}
           title="Next JS & Typescript with Shopify Integration - Full Guide"
           instructorName="Eincode by Filip Jerga, Filip Jerga"
           stars={4}
@@ -152,4 +167,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Recomended;

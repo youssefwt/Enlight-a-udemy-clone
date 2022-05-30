@@ -3,9 +3,9 @@ import Row2 from "../Row2";
 
 function Row2View() {
   return (
-    <div className="home">
-      <div className="home__heading">Students are viewing</div>
-      <div className="home__rows">
+    <div className="recomended">
+      <div className="recomended__heading">Students are viewing</div>
+      <div className="recomended__rows">
         <Row2
           title="The Complete 2021 Web Development Bootcamp"
           instructorName="Dr. Angela Yu"

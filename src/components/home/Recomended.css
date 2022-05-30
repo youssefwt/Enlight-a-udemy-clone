@@ -1,16 +1,16 @@
-.home {
+.recomended {
   margin-top: 3%;
   margin-left: 4%;
 }
 
-.home__rows {
+.recomended__rows {
   display: flex;
   width:95%;
   overflow-y: hidden;
   overflow-x: scroll;
 }
 
-.home__heading {
+.recomended__heading {
   font-family: "sf pro display", -apple-system, BlinkMacSystemFont, Roboto,
     "segoe ui", Helvetica, Arial, sans-serif, "apple color emoji",
     "segoe ui emoji", "segoe ui symbol";
@@ -20,6 +20,6 @@
   margin-bottom: 0.6%;
 }
 
-.home ::-webkit-scrollbar {
+.recomended ::-webkit-scrollbar {
   display: none;
 }

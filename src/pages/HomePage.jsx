@@ -6,7 +6,7 @@ import Categories from "../components/home/Categories";
 import CompanyList from "../components/home/CompanyList";
 import EducationBanner from "../components/home/EducationBanner";
 import Featured from "../components/home/Featured";
-import Home from "../components/home/Home";
+import Recomended from "../components/home/Recomended";
 import InstructorBanner from "../components/home/InstructorBanner";
 import Row2View from "../components/home/Row2View";
 import TopCategories from "../components/home/TopCategories";
@@ -16,7 +16,7 @@ const HomePage = () => {
     <>
       <Categories />
       <Banner />
-      <Home />
+      <Recomended />
       <Advantages />
       <Row2View />
       <TopCategories />

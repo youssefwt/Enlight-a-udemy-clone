@@ -9,6 +9,7 @@ import Page404 from "./components/Page404";
 import SignUp from "./components/signup/SignUp";
 import SearchPage from "./components/search/SearchPage";
 import HomePage from "./pages/HomePage";
+import { CoursePage } from "./pages/CoursePage";
 
 function App() {
   const [User, setUser] = useState(false);
@@ -20,6 +21,11 @@ function App() {
           <Route path="/" exact>
             <Navbar />
             <HomePage />
+            <Footer />
+          </Route>
+          <Route path="/course/:id" exact>
+            <Navbar />
+            <CoursePage />
             <Footer />
           </Route>
           <Route path="/search/:searchTerm">
