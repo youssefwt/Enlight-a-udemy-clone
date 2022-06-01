@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./Login.css";
 import { Link, useHistory } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import { firebase } from "../../firebase";
 import Footer from "../footer/Footer";
+import { useDispatch } from "react-redux";
+import { loginAsync } from "../../features/auth/authSlice";
+
 
 function Login() {
   const history = useHistory();
 
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
+  const email=useRef()
+  const password=useRef()
+  const dispatch = useDispatch();
+
 
   const signInWithGoogle = () => {
     const google_provider = new firebase.auth.GoogleAuthProvider();
@@ -25,16 +30,7 @@ function Login() {
   };
 
   const signInWithEmail = (e) => {
-    e.preventDefault();
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then((auth) => {
-        history.push("/");
-      })
-      .catch((error) => {
-        alert(error);
-      });
+    dispatch(loginAsync({ email: email.current.value, password: password.current.value }));
   };
 
   const signInWithFacebook = () => {
@@ -75,14 +71,12 @@ function Login() {
             <input
               type="text"
               placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              ref={email}
             />
             <input
               type="password"
               placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              ref={password}
             />
             <button type="submit" onClick={signInWithEmail}>
               Log In

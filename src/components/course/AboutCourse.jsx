@@ -7,7 +7,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
-import { WhatYouWillLearn, LearnItems } from "./AboutCourse.styled";
+import { WhatYouWillLearn } from "./AboutCourse.styled";
 import Grid from "@mui/material/Grid";
 
 const AboutCourse = () => {

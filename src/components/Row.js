@@ -1,7 +1,7 @@
 import React from "react";
 import Rating from "@mui/material/Rating";
 import "./Row.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Row({
   id,
