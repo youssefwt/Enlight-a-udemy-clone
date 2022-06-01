@@ -7,9 +7,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { firebase } from "../../firebase";
 import { Avatar } from "@mui/material";
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
+import { logOut } from "../../features/auth/authSlice";
 
 function Navbar() {
   const [showContent, setShowContent] = useState(false);
@@ -19,14 +19,16 @@ function Navbar() {
   }
 
   const history = useHistory();
+  const dispatch = useDispatch();
 
-  const signOutFromGoogle = () => {
-    firebase.auth().signOut();
-    history.push("/login");
-  };
-
+ 
   const user = useSelector((state) => state.auth.user)
 
+  const signOut = () => {
+    localStorage.removeItem("accessToken");
+    dispatch(logOut());
+    history.push("/login");
+  };
 
   const [searchInput, setSearchInput] = useState("");
 
@@ -62,7 +64,7 @@ function Navbar() {
         {user && (
           <>
             <hr />
-            <button className="m-signOut" onClick={signOutFromGoogle}>
+            <button className="m-signOut" onClick={signOut}>
               <h3 style={{ marginTop: "15px" }}>Log Out</h3>
             </button>
             <hr />
@@ -105,7 +107,7 @@ function Navbar() {
       <p className="navbar__text navbar__ub">Udemy Business</p>
       {user && (
         <>
-          <button onClick={signOutFromGoogle} className="navbar__logout">
+          <button onClick={signOut} className="navbar__logout">
             <p className="navbar__text navbar__ins">Log-Out</p>
           </button>
           <p className="navbar__text">My learning</p>
