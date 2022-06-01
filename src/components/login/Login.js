@@ -4,7 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import Navbar from "../navbar/Navbar";
 import { firebase } from "../../firebase";
 import Footer from "../footer/Footer";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginAsync } from "../../features/auth/authSlice";
 
 
@@ -14,7 +14,11 @@ function Login() {
   const email=useRef()
   const password=useRef()
   const dispatch = useDispatch();
+  const user = useSelector(state=>state.auth.user);
 
+  if(user){
+    history.push('/')
+  }
 
   const signInWithGoogle = () => {
     const google_provider = new firebase.auth.GoogleAuthProvider();

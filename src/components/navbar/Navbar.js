@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, {  useEffect } from "react";
 import "./Navbar.css";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
@@ -8,8 +8,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { firebase } from "../../firebase";
-import { UserContext } from "../Contexts/UserContext";
 import { Avatar } from "@mui/material";
+import { useSelector } from "react-redux";
 
 function Navbar() {
   const [showContent, setShowContent] = useState(false);
@@ -25,15 +25,8 @@ function Navbar() {
     history.push("/login");
   };
 
-  const { User, setUser } = useContext(UserContext);
+  const user = useSelector((state) => state.auth.user)
 
-  firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      setUser(true);
-    } else {
-      setUser(false);
-    }
-  });
 
   const [searchInput, setSearchInput] = useState("");
 
@@ -53,7 +46,7 @@ function Navbar() {
     <div className="navbar">
       <MenuIcon className="navbar__menuIcon" onClick={Toggle} />
       <div className={showContent ? "navbar__hidden" : "hide"}>
-        {!User && (
+        {!user && (
           <>
             <hr />
             <Link to="/login">
@@ -66,7 +59,7 @@ function Navbar() {
           </>
         )}
 
-        {User && (
+        {user && (
           <>
             <hr />
             <button className="m-signOut" onClick={signOutFromGoogle}>
@@ -110,7 +103,7 @@ function Navbar() {
         onKeyPress={handleEnter}
       />
       <p className="navbar__text navbar__ub">Udemy Business</p>
-      {User && (
+      {user && (
         <>
           <button onClick={signOutFromGoogle} className="navbar__logout">
             <p className="navbar__text navbar__ins">Log-Out</p>
@@ -125,7 +118,7 @@ function Navbar() {
           <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
         </>
       )}
-      {!User && (
+      {!user && (
         <div className="navbar__user">
           <Link to={`/search/python`}>
             <SearchIcon className="navbar__searchIcon" />
